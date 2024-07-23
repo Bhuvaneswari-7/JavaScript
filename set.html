@@ -1,0 +1,27 @@
+<!--JavaScript Sets-->
+<!--•	A JavaScript Set is a collection of unique values.
+•	Each value can only occur once in a Set.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fun1()">
+    <script>
+        function fun1()
+        {
+            let s1=new Set([1,2,3,1,4,5,1]);
+            document.write("<h1>set elements</h1>");
+            for(let ele of s1)
+            document.write(ele,",");
+            let arr=[1,2,3,1,4,5,1];
+            document.write("<h1>array elements</h1>");
+            for(let ele of arr)
+            document.write(ele,",");
+        }
+    </script>
+</body>
+</html>

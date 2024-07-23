@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1()
+        {
+            let r=Math.floor(Math.random()*255);
+            let g=Math.floor(Math.random()*255);
+            let b=Math.floor(Math.random()*255);
+            document.getElementById("r").value=r;
+            document.getElementById("r").style.backgroundColor="rgb("+r+",0,0)";
+            document.getElementById("g").value=g;
+            document.getElementById("g").style.backgroundColor="rgb(0,"+g+",0)";
+            document.getElementById("b").value=b;
+            document.getElementById("b").style.backgroundColor="rgb(0,0,"+b+")";
+            document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";
+            //Math.floor(34.88) result will be 34
+        }
+    </script>
+</head>
+<body onload="setInterval(fun1,3000)">
+    <h1>Math.random() method usage</h1>
+    <input style="color:white;" type="text" id="r"><input style="color:white;" type="text" id="g"><input style="color:white;" type="text" id="b">
+</body>
+</html>

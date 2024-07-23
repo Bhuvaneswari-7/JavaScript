@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(btnEle)
+        {   //btnEle=<button  onclick="calc(this)">Sub</button>
+            let btnTitle=btnEle.innerHTML;
+            let a=parseInt(document.getElementById("a").value)
+            let b=parseInt(document.getElementById("b").value)
+            let c=0;
+            if(btnTitle=="Add")
+            {   c=a+b;
+            }
+            else if(btnTitle=="Sub")
+            {   c=a-b;
+            }if(btnTitle=="Multi")
+            {   c=a*b;
+            }if(btnTitle=="Div")
+            {   c=a/b;
+            }if(btnTitle=="Mod")
+            {   c=a%b;
+            }if(btnTitle=="**")
+            {   c=a**b;
+            }
+            document.getElementById("c").value=c;
+        }
+    </script>
+</head>
+<body style="background-color: rgb(11, 82, 124);">
+    <h1 style="color: white;">Calculation</h1>
+    Enter First Number: <input style="color: white;" type="text" id="a"><br><br>
+    Enter Second Number:<input style="color: white;" type="text" id="b" ><br><br>
+    Result:<input type="text" id="c"><br><br>
+    <button  onclick="calc(this)">Add</button>
+    <button  onclick="calc(this)" >Sub</button>
+    <button  onclick="calc(this)" >Multi</button>
+    <button  onclick="calc(this)" >Div</button>
+    <button  onclick="calc(this)" >Mod</button>
+    <button  onclick="calc(this)" >**</button>
+</body>
+</html>

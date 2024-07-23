@@ -1,0 +1,30 @@
+<!--Example on onload Event
+    Example on usage of setinterval() method(The setInterval() method calls a function at specified intervals (in milliseconds).
+
+)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1() {
+            let spanEle = document.getElementById("tm");
+            const date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+            let ampm = h >= 12 ? 'PM' : 'AM';
+            //h = h % 12;
+            h = h ? h : 12; // the hour '0' should be '12'
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;//
+            spanEle.innerHTML = h + ":" + m + ":" + s + " " + ampm;
+        }
+    </script>
+</head>
+<body onload="setInterval(fun1, 1000)">
+    <h1 style="text-align: right;">Time:&nbsp;<span id="tm">&nbsp;&nbsp;</span></h1>
+</body>
+</html>

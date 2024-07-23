@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            let e1=
+            {
+                eno:1,
+                ename:"Bhuvana",
+                year:4
+            }
+            let j1=JSON.stringify(e1);
+             v1=document.getElementById("p1").innerHTML=j1;
+            console.log(v1);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>JSON stringify</h1>
+    <button onclick="fun1()">click</button>
+    <p id="p1" style="color:rgb(99, 47, 255);">Result here</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--Usage of innerHTML attribute of an element to display the output-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1()
+        {
+            let ele=document.getElementById("e1");
+            ele.innerHTML="Gudlavalleru Engineering College";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="e1">SR GEC College</h1>
+    <button onclick="fun1()">CickMePlease</button>
+    <p>
+        Click the button to change the content of h1 element
+    </p>
+</body>
+</html>

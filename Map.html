@@ -1,0 +1,38 @@
+<!--You can create a JavaScript Map by:
+•	Passing an Array to new Map()
+•	Create a Map and use Map.set()
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <script>       
+             
+      let m1=new Map([
+            [1,"Madhu"],
+            [2,"Satwik"],
+            [3,"RamMohan"]
+        ]);
+      console.log(m1);
+
+    let m2=new Map();
+    m2.set(4,"Narendra");
+    m2.set(5,"Chethan");
+    m2.set(6,"Sumanth");
+    console.log(m2);
+
+    let name=m2.get(6)
+    console.log(name);
+    for(let ele of m2)
+    {   console.log(ele[0],ele[1]);
+    }
+</script>
+
+    </script>    
+</body>
+</html>

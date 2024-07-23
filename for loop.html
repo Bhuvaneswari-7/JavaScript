@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            let e1={eno:101,ename:"Ram",eags:20};
+            for(let i in e1)
+        {
+            console.log(e1[i]);
+        }
+        //Example on usage of Object.entries() method
+        let e2=Object.entries(e1);
+            for(let i of e2)
+            {
+                console.log(i);
+            }
+
+    }
+    </script>
+</head>
+<body>
+    <h1>for loop</h1>
+    <button onclick="fun1()">click</button>
+</body>
+</html>

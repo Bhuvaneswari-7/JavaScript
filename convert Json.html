@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1()
+        {
+            let x='{"students":[{"sno":"1","sname":"madhu.k"},{"sno":"2","sname":"priya"},{"sno":"3","sname":"vinutna"},{"sno":"4","sname":"pranutna"}]}';
+            let obj=JSON.parse(x);
+            console.log(obj);
+            console.log(obj.students)   
+            for(let i in obj.students)
+            {  //i=0,1,2,3
+                for(let field in obj.students[i])//{"sno":"2","sname":"priya"}
+                {
+                    console.log(field,'=',obj.students[i][field]);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">Click</button>   
+</body>
+</html>

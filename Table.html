@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td,th{
+            border: 1px solid black;
+        }
+        th{
+            text-align: left;
+            background-color: green;
+            color:white;
+        }
+    </style>
+    <script>
+        const arr=[];
+        function fun1()
+        {
+            arr.push(
+                    {sno:document.getElementById("sno").value,
+                    sname:document.getElementById("sname").value,
+                    totalmarks:document.getElementById("totalmarks").value
+                    }
+                );
+            console.log(arr);
+            let divEle=document.getElementById("students");
+            let txt="<table style='width:100%'>";
+            txt=txt+"<tr><th>SNO</th><th>SNAME</th><th>TOTALMARKS</th></tr>";
+            for(let student of arr)
+            {
+                txt=txt+"<tr><td>"+student.sno+"</td><td>"+student.sname+"</td><td>"+student.totalmarks+"</td></tr>";
+            }     
+            txt=txt+"</table>"
+            divEle.innerHTML=txt;
+        }
+    </script>
+</head>
+<body>
+        <h1>Student Form</h1>
+        <input type="text" placeholder="Sno:" id="sno" name="sno"><br>
+        <input type="text" placeholder="Sname:" id="sname" name="sname"><br>
+        <input type="text" placeholder="TotalMarks" id="totalmarks" name="totalmarks"><br>
+        <button onclick="fun1()">Add</button>
+    <div id="students">
+    </div>
+</body>
+</html>

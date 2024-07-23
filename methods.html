@@ -1,0 +1,60 @@
+<!--1.	Classes also allows you to use getters and setters.
+2.	It can be smart to use getters and setters for your properties, especially if you want to do something special with the value before returning them, or before you set them.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Emp
+        {
+            constructor(eno,ename,sal)
+            {   this.eno=eno;
+                this.ename=ename;
+                this.sal=sal;
+            }
+            get empNo()
+            {return this.eno;
+            }
+            set empNo(eno)
+            {
+                this.eno=eno;
+            }
+
+            get empName()
+            {return this.ename;
+            }
+            set empName(ename)
+            {
+                this.ename=ename;
+            }
+
+            get empSal()
+            {return this.sal;
+            }
+            set empSal(sal)
+            {
+                this.sal=sal;
+            }
+          
+        }
+
+       let e1=new Emp(101,"RamMohan",400000);
+        console.log(e1.empNo);
+        console.log(e1.empName);
+        console.log(e1.empSal);
+
+        e1.empNo=102;
+        e1.empName="Satwik";
+        e1.empSal=500000;
+        console.log(e1.empNo);
+        console.log(e1.empName);
+        console.log(e1.empSal);
+    </script>
+</head>
+<body>
+<h1>ctrl+shift+j</h1>
+</body>
+</html>
